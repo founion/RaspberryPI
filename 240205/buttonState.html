@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>RASPBERRY PI STATE VIEWER</title>
+    <meta name = "viewport" content = "width=device-width initial-scale=1">
+    <meta http-equiv = "refresh" content = "1">
+  </head>
+  <body>
+    <h1>라즈베리파이의 스위치 눌림여부를 웹사이트로 전달</h1>
+    <hr>
+    <div style = "padding-left:20px;">
+      <h3>각각의 스위치 상태</h3>
+      <p style = "color : red">
+        <b>1번 스위치: {% if sw_state[0] != 0 %} 켜짐
+          {% elif sw_state[0] == 0 %} 꺼짐
+          {% endif %}
+        </b>
+      </p>
+      <p style = "color : green">
+        <b>2번 스위치: {% if sw_state[1] != 0 %} 켜짐
+          {% elif sw_state[1] == 0 %} 꺼짐
+          {% endif %}
+        </b>
+      </p>
+      <p style = "color : blue">
+        <b>3번 스위치: {% if sw_state[2] != 0 %} 켜짐
+          {% elif sw_state[2] == 0 %} 꺼짐
+          {% endif %}
+        </b>
+      </p>
+      <hr>
+    </div>
+  </body>
+</html>
